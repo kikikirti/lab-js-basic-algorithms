@@ -72,3 +72,26 @@ console.log("Number of words:", wordCount);
 // Count the occurrences of the word "et"
 let etCount = countOccurrences(loremIpsumText, "et");
 console.log("Number of occurrences of 'et':", etCount);
+
+// BONUS 2
+// Create a variable phraseToCheck and assign a string value
+let phraseToCheck = "A man, a plan, a canal, Panama!";
+
+// Function to check if a string is a palindrome
+function isPalindrome(phrase) {
+  // Remove non-alphanumeric characters and convert to lowercase
+  let cleanedPhrase = phrase.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  
+  // Reversing the cleaned phrase
+  let reversedPhrase = cleanedPhrase.split('').reverse().join('');
+  
+  // Checking if the cleaned phrase is equal to the reversed phrase
+  return cleanedPhrase === reversedPhrase;
+}
+
+// Checking if the phrase is a palindrome
+if (isPalindrome(phraseToCheck)) {
+  console.log(`"${phraseToCheck}" is a palindrome.`);
+} else {
+  console.log(`"${phraseToCheck}" is not a palindrome.`);
+}
